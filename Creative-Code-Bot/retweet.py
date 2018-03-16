@@ -8,7 +8,6 @@ api = tweepy.API(auth)
 
 for tweet in tweepy.Cursor(api.search, q='#creativecode').items():
     try:
-        # Add \n escape character to print() to organize tweets
         print('\nTweet by: @' + tweet.user.screen_name)
 
         # Retweet tweets as they are found
